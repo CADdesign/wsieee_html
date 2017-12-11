@@ -1,0 +1,26 @@
+$light-orange-color-half: rgba(243, 165, 0, 0.50);
+$secondary-orange: rgba(243, 155, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$primary-color: #00897b;
+$primary-dark-color: #005b4f;
+$primary-light-color: #4ebaaa;
+$secondary-color: #993300;
+$secondary-lighter: #d0612f;
+$secondary-dark: #650000;
+$primary-lighter-color: rgba(78, 186, 170, 0.8);
+
+.color-teal {
+  background-color: $primary-color;
+}
+
+.color-dark-teal {
+  background-color: $primary-dark-color;
+}
+
+.color-light-teal {
+  background-color: $primary-light-color;
+}
+
+.color-lighter-teal {
+  background-color: $primary-lighter-color;
+}

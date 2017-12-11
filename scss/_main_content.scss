@@ -1,0 +1,79 @@
+// Main Landing Page Content
+/*Main Splash section */
+#main-splash {
+  height: 600px;
+  background: url("../img/WSSkyline.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding-top: 0;
+}
+
+.splash-caption {
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  top: 15%;
+  z-index: 10;
+  padding-top: 150px;
+  color: $white;
+  width: 400px;
+  height: 400px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  a {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+}
+
+/* Map on Landing page */
+#map {
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+/* About section */
+#about-group {
+  div {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+/* Officers Section */
+#officers {
+  background-color: rgba(78, 186, 170, 0.60);
+  padding-top: 3%;
+  padding-bottom: 3%;
+  div {
+    margin-left: 1%;
+    margin-right: 1%;
+    .card {
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      @include transition(all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+      &:hover {
+        -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#calendar-section {
+  padding-bottom: 2%;
+}
+
+#upcoming-events-section {
+  background-color: rgba(78, 186, 170, 0.60);
+}

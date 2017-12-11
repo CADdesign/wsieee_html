@@ -1,0 +1,103 @@
+/* SIDEBAR */
+@import 'projMixins';
+
+#sidebar {
+  width: 260px;
+  font-weight: 500;
+  color: #000000;
+  position: fixed;
+  @include transition(left 0.5s cubic-bezier(0.945, 0.020, 0.270, 0.665));
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: -260px;
+  z-index: 2000;
+  border-radius: 2px;
+  @include box-shadow(0 20px 32px rgba(0, 0, 0, 0.12));
+  > ul {
+    padding-top: 8px;
+  }
+  & > ul > li {
+    padding-left: 24px;
+    padding-right: 32px;
+    height: 32px;
+    & > a {
+      @include transition(padding-right 0.5s cubic-bezier(0.19, 1, 0.22, 1));
+      display: inline-block;
+      width: 100%;
+    }
+    & > a::before {
+      content: "\276f";
+      font-size: $regular-size;
+      font-weight: 700;
+      position: absolute;
+      opacity: 0;
+      left: 8px;
+      @include transition(all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+    }
+    & > a:hover::before {
+      opacity: 1;
+      left: 0;
+    }
+    & > a:hover {
+      padding-left: 8px;
+    }
+  }
+}
+
+#sidebar.opened {
+  left: 0;
+}
+
+.sidebar-header {
+  padding-left: 5px;
+}
+
+.list-unstyled {
+  font-size: $regular-size;
+  > li > a {
+    color: rgba(0, 0, 0, 0.65);
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+      font-weight: bold;
+    }
+  }
+}
+
+#sidebarCollapseBtn {
+  left: 12px;
+  width: 48px;
+  height: 48px;
+  background: transparent center center no-repeat;
+  background-size: 24px 24px;
+  cursor: pointer;
+  border: 0;
+  overflow: hidden;
+  position: fixed;
+  @include transition(all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375));
+  span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: white;
+    @include transition(all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375));
+  }
+  span:first-of-type {
+    @include transform(rotate(45deg) translate(2px, 2px));
+  }
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+  span:last-of-type {
+    @include transform(rotate(-45deg) translate(1px, -1px));
+  }
+  &.active span {
+    @include transform(none);
+    opacity: 1;
+    margin: 5px auto;
+  }
+}
+
+
+

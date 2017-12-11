@@ -1,0 +1,68 @@
+//BUTTONS
+
+/*BUTTONS:
+ Including hover, transitions, etc.*/
+@import 'colors';
+@import 'fonts';
+@import 'projMixins';
+
+a.button{
+  background: $light-orange-color-half;
+  border: 3px solid $secondary-orange;
+  border-radius: 2px;
+  padding: 12px 25px;
+  margin: 40px 0 40px 0;
+  display: inline-block;
+  color: rgba(0,0,0,0.40);
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: $regular-size;
+  @include transition(color 0.25s ease-in-out);
+
+}
+
+a.button:hover .svg-wrap svg,
+button.button:hover .svg-wrap svg {
+  fill: #000;
+}
+
+a.button:hover,
+button.button:hover,
+span.button.input-button-wrap:hover,
+span.button.input-button-wrap input:hover {
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .64);
+
+}
+
+a.button:hover:before,
+button.button:hover:before,
+span.button.input-button-wrap:hover:before {
+  right: 0;
+}
+
+a.button:before,
+button.button:before,
+span.button.input-button-wrap:before {
+  content: '';
+  position: absolute;
+  background-color: $secondary-orange;
+  z-index: -1;
+  right: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  @include transition(right 0.15s ease-in-out);
+}
+
+a.button-text {
+  fill: $secondary-orange;
+  max-height: 30px;
+  max-width: 24px;
+  vertical-align: middle;
+  width: 100%;
+  @include transition(fill 0.25s ease-in-out);
+}

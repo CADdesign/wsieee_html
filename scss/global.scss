@@ -1,0 +1,12 @@
+// GLOBAL SCSS FILE
+@import 'reset';
+body{
+  padding-top: 100px;
+}
+@import 'mainSettings';
+@import 'buttons';
+@import 'header';
+@import 'sidebar';
+@import 'calendar';
+@import 'main_content';
+@import 'footer';
