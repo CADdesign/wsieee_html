@@ -65,15 +65,17 @@
 }
 
 #sidebarCollapseBtn {
-  left: 12px;
+  left: 20px;
+  padding-top: 27px;
   width: 48px;
   height: 48px;
   background: transparent center center no-repeat;
   background-size: 24px 24px;
   cursor: pointer;
   border: 0;
+  outline: none;
   overflow: hidden;
-  position: fixed;
+  //position: fixed;
   @include transition(all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375));
   span {
     width: 80%;

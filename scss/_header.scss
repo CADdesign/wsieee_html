@@ -4,12 +4,13 @@
 @import 'colors';
 @import 'fonts';
 
+$header_height: 75px;
+
 header {
   box-sizing: border-box;
   @include box-shadow(0 6px 10px rgba(0, 0, 0, .26));
   z-index: 1;
-  right: 0;
-  left: 0;
+  width: 100%;
   top: 0;
   position: fixed;
   margin-bottom: 10px;
@@ -24,32 +25,36 @@ header {
 }
 
 .header-wrapper {
-  left: 72px;
-  right: 72px;
-  top: 0;
   z-index: 2;
   @include transition(padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1));
-
 }
 
 .wsieee-navbar {
   position: fixed;
   z-index: 200;
-  height: 100px;
+  height: $header_height;
   @include transition(top 0.25s ease-in-out);
+  @media screen and (max-width: 1000px) {
+    height: $header_height * 2;
+  }
 }
 
 .wsieee-navbar-nav {
+  display: inline;
   & > li {
-    padding: 0 25px 0 25px;
     display: inline-block;
+    padding-left: 1%;
+    padding-right: 1%;
+    @include breakpoint(laptop) {
+      padding: 0;
+    }
     > a {
       color: $white;
       text-decoration: none;
       letter-spacing: .115em;
       text-transform: uppercase;
-      font-size: 17px;
       position: relative;
+      padding-top: 9px;
 
     }
   }
@@ -63,7 +68,7 @@ header {
   top: 50%;
   left: calc(50%);
   @include transform(translateX(-50%) scaleX(0));
-  width: calc(100%);
+  width: calc(75%);
   height: 10px;
   border-bottom: 2px solid $white;
   @include transition(all 0.2s ease-in-out);
@@ -76,14 +81,27 @@ header {
 
 .navbar-brand {
   color: $white;
-  padding-top: 0.125rem;
-  font-size: 1.45rem;
+  padding-top: 25px;
+  font-size: 1.25rem;
+  &:hover{
+    color: $white;
+  }
+  @media screen and (max-width: 992px){
+    padding-left: 35%;
+    padding-top: 0;
+  }
 }
+
 
 .nav-link {
   color: $white;
   font-weight: 500;
-  :hover {
+  &:hover {
     color: $white;
   }
+
+}
+
+.main-nav {
+  padding-top: 1.3%;
 }

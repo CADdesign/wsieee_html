@@ -1,23 +1,43 @@
 //PROJECT MIXINS
 
-@mixin box-shadow($box-shadow){
+@mixin box-shadow($box-shadow) {
   -webkit-box-shadow: $box-shadow;
   -moz-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 }
 
-@mixin transition($transition){
+@mixin transition($transition) {
   -webkit-transition: $transition;
-  -moz-transition: $transition ;
-  -ms-transition: $transition ;
-  -o-transition: $transition ;
-  transition: $transition ;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
 }
 
-@mixin transform($transform){
+@mixin transform($transform) {
   -webkit-transform: $transform;
   -moz-transform: $transform;
   -ms-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media(max-width: 1440px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media(max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media(max-width: 760px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 440px) {
+      @content;
+    }
+  }
 }
