@@ -137,7 +137,11 @@ header {
       padding-top: 0; } }
 
 body {
-  padding-top: 75px; }
+  padding-top: 75px;
+  font-family: "Open sans", "Oxygen", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Serif", serif; }
 
 /* General Settings and Site Settings */
 a {
@@ -469,7 +473,6 @@ a.button-text {
     margin-top: 0;
     margin-bottom: 0; }
   .splash-caption h3 {
-    font-weight: 600;
     letter-spacing: 3px; }
 
 /* Map on Landing page */
