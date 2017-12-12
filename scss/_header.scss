@@ -4,6 +4,7 @@
 @import 'colors';
 @import 'fonts';
 
+$breakpoint-width: 992px;
 $header_height: 75px;
 
 header {
@@ -34,13 +35,18 @@ header {
   z-index: 200;
   height: $header_height;
   @include transition(top 0.25s ease-in-out);
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: $breakpoint-width) {
     height: $header_height * 2;
   }
 }
 
 .wsieee-navbar-nav {
   display: inline;
+  @media screen and (max-width: $breakpoint-width) {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
   & > li {
     display: inline-block;
     padding-left: 1%;
@@ -86,7 +92,7 @@ header {
   &:hover{
     color: $white;
   }
-  @media screen and (max-width: 992px){
+  @media screen and (max-width: $breakpoint-width){
     padding-left: 35%;
     padding-top: 0;
   }
@@ -104,4 +110,7 @@ header {
 
 .main-nav {
   padding-top: 1.3%;
+  @media screen and (max-width: $breakpoint-width) {
+    padding-top: 0;
+}
 }
