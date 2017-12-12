@@ -9,7 +9,8 @@
 }
 
 .splash-caption {
-  //position: absolute;
+  /* Position absolute required for hover functionality */
+  position: absolute;
   text-align: center;
   //left: 40%;
   //top: 15%;
