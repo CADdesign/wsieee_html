@@ -74,7 +74,7 @@ header {
     display: inline-block;
     padding-left: 1%;
     padding-right: 1%; }
-    @media (max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
       .wsieee-navbar-nav > li {
         padding: 0; } }
     .wsieee-navbar-nav > li > a {
