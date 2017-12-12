@@ -4,13 +4,22 @@ var lastScrollTop = 0;
 var delta = 5;
 var navBarHeight = $('header').outerHeight();
 
-$('#sidebarCollapseBtn').on('click', function () {
+$('#sidebarCollapseBtn').on('click', function (e) {
+    e.stopPropagation();
     var sidebar = $('#sidebar');
-    var $body = $('body');
-    $body.toggleClass('noscroll');
+    $('body').toggleClass('noscroll');
     sidebar.toggleClass('opened');
     $(this).toggleClass('active');
     sidebar.css({'top':lastScrollTop});
+});
+
+$('body').click(function(){
+    var sidebar = $('#sidebar');
+    if(sidebar.hasClass('opened')){
+        sidebar.toggleClass('opened');
+        $('body').toggleClass('noscroll');
+        $('#sidebarCollapseBtn').toggleClass('active');
+    }
 });
 
 $(window).scroll(function(){
